@@ -1,8 +1,43 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  background-image: radial-gradient(black 15%, transparent 16%),
+    radial-gradient(black 15%, transparent 16%),
+    radial-gradient(#ffffff1a 15%, transparent 20%),
+    radial-gradient(#ffffff1a 15%, transparent 20%);
+    background-position: 0 0, 8px 8px, 0 1px, 8px 9px;
+    background-size: 16px 16px;
+    background-color: #282828;
+
 }
 
-a {
-  color: #00B7FF;
+.border{
+  border-radius: 10px;
+  background-color: 
+  rgba(161, 159, 156, 0.685);
+  justify-content: center;
+}
+
+.Card1{
+  background-color: rgba(214, 210, 210, 0.829);
+  border-radius: 40px;
+  height: 420px;
+  width: 350px;
+}
+
+.Card1 img{      
+  height: 200px;
+  width: 100%;    
+  border-radius: 24px 24px 0 0;
+}
+
+.card2{
+  height: 300px;
+  width: 1090px;
+  background-color: rgba(214, 210, 210, 0.829);
+  border-radius: 40px;
+}
+
+.card2 img{      
+  height: 300px;
+  width: 100%;    
+  border-radius: 24px 24px 24px 24px;
 }
