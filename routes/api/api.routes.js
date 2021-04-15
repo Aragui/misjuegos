@@ -49,6 +49,17 @@ router.get('/get-less-popular', async (req, res) => {
     }
 })
 
+router.post('/subir', async (req, res) => {
+    const {name, description, image} = req.body;
+
+    try{
+        const result = await addGame(name, description, image);
+        res.status(200).send('ok');
+    }catch(e){
+        res.status(500).send(e);
+    }
+})
+
 router.post('/suggest-game',uploader.single('image') ,async (req, res) => {
     const {name, description} = req.body;
     const {file} = req;
