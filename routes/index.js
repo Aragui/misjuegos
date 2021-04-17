@@ -10,4 +10,12 @@ router.get('/subir', (req, res) => {
   res.render('form', { title: 'Express' });
 });
 
+router.get('/recomendar-juego', (req, res) => {
+  res.render('recomendar', {title: 'Recomienda un juego'});
+})
+
+router.get('/juegos', (req, res) => {
+  res.render('videogames', {title: 'Juegos'})
+})
+
 module.exports = router;

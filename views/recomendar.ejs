@@ -1,0 +1,30 @@
+<%- include layout/header.ejs %>
+    <main class="container text-white">
+        <div class="row">
+            <h2>Recomienda tu juego favorito</h2>
+        </div>
+        <div class="border"></div>
+        <form class="mt-4 row" id="game">
+            <div class="col-md-5 d-flex flex-column align-items-center justify-content-center">
+                <label class="w-75 my-2 ">
+                    <small>Nombre</small>
+                    <input type="text" name="title" id="title" class="form-control">
+                </label>
+                <label class="w-75 my-2">
+                    <small>Descripción</small>
+                    <textarea name="description" id="description" cols="30" rows="4" class="form-control" ></textarea>
+                </label>
+                <div class="w-100 d-flex justify-content-center mt-2">
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                </div>
+            </div>
+            <div class="col-md-7 d-flex justify-content-center">
+                <label class="pointer img-container d-flex justify-content-center align-items-center" id="lbl-photo">
+                    <img src="/images/upload.png" alt="Subir foto" id="photo" class="w-75 h-75">
+                    <input type="file" name="image" id="image" hidden accept="image/*">
+                </label>
+            </div>
+        </form>
+    </main>
+<script src="/javascript/recomendar/scripts.js"></script>
+<%- include layout/footer.ejs %>
