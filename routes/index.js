@@ -18,4 +18,8 @@ router.get('/juegos', (req, res) => {
   res.render('videogames', {title: 'Juegos'})
 })
 
+router.get('/recomendaciones', (req, res) => {
+  res.render('recommendations', {title: 'Recomendaciones'})
+})
+
 module.exports = router;

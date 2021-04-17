@@ -62,3 +62,13 @@ textarea{
 .img-container>img{
   object-fit: fill;
 }
+
+
+.btn-light{
+  transition: ease-in-out 0.3s;
+}
+
+.btn-light:hover{
+  color: aliceblue;
+  background-color: rgb(85, 84, 84);
+}
