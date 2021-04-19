@@ -82,4 +82,8 @@ router.post('/registrate', async(req, res) => {
   }
 })
 
+router.get('/panelrecomendacion', (req, res) => {
+  res.render('recommendationPanel', {title: 'Panel de Recomendacion'})
+})
+
 module.exports = router;
