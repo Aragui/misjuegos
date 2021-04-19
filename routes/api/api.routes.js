@@ -10,6 +10,7 @@ const { likeGame } = require('../../db/like-game');
 const {getMostPopular} = require('../../db/get-most-popular');
 const { getLessPopular } = require('../../db/get-less-popular');
 const { search } = require('../../db/search');
+const { deleteJuego } = require('../../db/delete');
 
 const router = express.Router();
 
@@ -79,6 +80,7 @@ router.post('/suggest-game',uploader.single('image') ,async (req, res) => {
 });
 
 router.post('/authorize', async (req, res) => {
+    console.log(req.body)
     const {id} = req.body;
 
     try{
@@ -97,6 +99,18 @@ router.post('/search', async (req, res) => {
         res.status(200).send(result);
     }catch(e){
         res.status(500).send(e);
+    }
+})
+
+router.delete('/delete/:id', async (req, res) => {
+    const {id} = req.params;
+
+    try{
+        await deleteJuego(id);
+        res.status(200).send("OK");
+    }
+    catch(err){
+        res.status(500).send(err);
     }
 })
 

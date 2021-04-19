@@ -22,4 +22,8 @@ router.get('/recomendaciones', (req, res) => {
   res.render('recommendations', {title: 'Recomendaciones'})
 })
 
+router.get('/panelrecomendacion', (req, res) => {
+  res.render('recommendationPanel', {title: 'Panel de Recomendacion'})
+})
+
 module.exports = router;
