@@ -30,19 +30,14 @@
         <div class="row h-100 d-flex justify-content-center align-items-center">
             <div class="card text-center w-50 h-75">
                 <div class="card-header">
-                    Inicia sesión
+                    Regístrate
                 </div>
-                <form class="card-body d-flex flex-column justify-content-center needs-validation" method="POST" action="/login">
-                    <% if(error !== ''){%>
-                    <div class="alert alert-danger" role="alert">
-                        <%= error %>
-                      </div>
+                <form class="card-body d-flex flex-column justify-content-center needs-validation" method="POST" action="/registrate">
+                    <% if(error !=='' ){%>
+                        <div class="alert alert-danger" role="alert">
+                            <%= error %>
+                        </div>
                     <% } %>
-                    <% if(msg !== ''){%>
-                        <div class="alert alert-info" role="alert">
-                            <%= msg %>
-                          </div>
-                        <% } %>
                     <div class="mb-3 row">
                         <label for="email" class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9">
@@ -62,7 +57,7 @@
                     </div>
                 </form>
                 <div class="card-footer text-muted">
-                    <span>¿No tienes cuenta? Registrate <a href="/registrate">aquí</a></span>
+                    <span>¿Tienes una cuenta? Inicia sesión <a href="/login">aquí</a></span>
                 </div>
             </div>
         </div>
