@@ -5,4 +5,4 @@ exports.getSuggested = async () => await (await db.collection('games').orderBy('
 
 const { GameModel } = require("../models/game");
 
-exports.getSuggested = async () => await GameModel.find({authorized: false});
+exports.getSuggested = async () => await GameModel.find({authorized: false}).where({authorized: false});
