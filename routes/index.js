@@ -82,14 +82,9 @@ router.post('/registrate', async(req, res) => {
 
   try{
     const result = await signUp(email, password);
-    if(result._id){
-      res.render('login', {title: 'Inicio de sesión', error: '', msg: 'Inicia sesión para continuar'})
-    }else{
-      res.render('registrate', {title: 'Registrate', error: 'Ha ocurrido un error, vuelve a intentar', msg: ''})
-
-    }
-  }catch(e){
-    console.log(e)
+    res.render('login', {title: 'Inicio de sesión', error: '', msg: 'Inicia sesión para continuar'})
+  }catch{
+    res.render('registrate', {title: 'Registrate', error: 'Ha ocurrido un error, vuelve a intentar', msg: ''})
   }
 })
 
