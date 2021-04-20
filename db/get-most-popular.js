@@ -5,4 +5,4 @@ exports.getMostPopular = async () => await (await db.collection('games').orderBy
 
 const { GameModel } = require("../models/game");
 
-exports.getMostPopular = async () => await GameModel.find({}).sort({likes: -1});
+exports.getMostPopular = async () => await GameModel.find({}).sort({likes: -1}).where({aurhorized: true});

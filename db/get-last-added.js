@@ -5,4 +5,4 @@ exports.getAll = async () => await (await db.collection('games').orderBy('added'
 
 const { GameModel } = require("../models/game");
 
-exports.getAll = async () => await GameModel.find({}).sort({_id: -1});
+exports.getAll = async () => await GameModel.find({}).sort({_id: -1}).where({authorized: true});

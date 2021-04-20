@@ -1,6 +1,6 @@
 const recomendaciones = document.querySelector('#recomendaciones');
 
-function createCard(title, description, image){
+function createCard(title, description, image, likes){
 
     const card = 
     `<div class="col-md-9">
@@ -13,6 +13,7 @@ function createCard(title, description, image){
           <div class="card-body">
             <h5 class="card-title text-white" style="font-weight: bold;">${title}</h5>
             <p class="card-text text-white">${description}</p>
+            <p class="card-text text-white">${likes} personas recomendaron este juego</p>
             <a class="btn mx-auto text-center btn-light w-25">Jugar Ahora</a>
           </div>
         </div>
@@ -29,7 +30,7 @@ fetch('api/get-most-popular')
     .then(res => res.json())
     .then(json => {
         json.forEach(recomedacion => {
-            const card = createCard(recomedacion.title, recomedacion.description, recomedacion.photo);
+            const card = createCard(recomedacion.title, recomedacion.description, recomedacion.photo, recomedacion.likes);
             recomendaciones.innerHTML+=card;
         })
     })
