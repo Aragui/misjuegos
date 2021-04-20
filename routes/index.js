@@ -1,6 +1,8 @@
 var express = require('express');
+const { likeGame } = require('../db/like-game');
 const { login } = require('../db/login');
 const { signUp } = require('../db/signup');
+const { route } = require('./api/api.routes');
 var router = express.Router();
 
 /* GET home page. */
@@ -8,7 +10,7 @@ router.get('/', function(req, res, next) {
   if(!req.session.role){
     res.redirect('/login');
   }else{
-    res.render('recommendationPanel', { title: 'Inicio' });
+    res.render('recommendationPanel', { title: 'Inicio'});
   }
 });
 
@@ -84,6 +86,17 @@ router.post('/registrate', async(req, res) => {
 
 router.get('/panelrecomendacion', (req, res) => {
   res.render('recommendationPanel', {title: 'Panel de Recomendacion'})
+})
+
+router.get('/like/:id', async (req, res) => {
+  const {id} = req.params;
+
+  try{
+    await likeGame(id);
+    res.render('like', {title: 'Haz dado like', msg: 'Haz recomendado el juego'});
+  }catch(e){
+    res.render('like', {title: 'Error', msg: 'Ha ocurrido un error, vuelve a intentarlo'});
+  }
 })
 
 module.exports = router;

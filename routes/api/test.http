@@ -28,3 +28,12 @@ Content-Type: application/json
 ###
 
 get http://localhost:3000/api/get-all
+
+###
+
+post http://localhost:3000/api/search
+Content-Type: application/json
+
+{
+    "name": "test"
+}

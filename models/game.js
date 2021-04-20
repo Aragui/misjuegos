@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-exports.GameModel = mongoose.model('Game', new mongoose.Schema({
+const gameSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -15,10 +15,14 @@ exports.GameModel = mongoose.model('Game', new mongoose.Schema({
     },
     likes: {
         type: Number,
-        default: 0
+        default: 1
     },
     authorized: {
         type: Boolean,
         default: false
     }
-}))
+});
+
+gameSchema.index({title: 'text'});
+
+exports.GameModel = mongoose.model('Game', gameSchema)
