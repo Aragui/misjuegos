@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   if(!req.session.role){
     res.redirect('/login');
   }else{
-    res.render('recommendationPanel', { title: 'Inicio' });
+    res.render('index', { title: 'Inicio' });
   }
 });
 

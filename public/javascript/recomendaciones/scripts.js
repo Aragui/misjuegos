@@ -3,7 +3,7 @@ const recomendaciones = document.querySelector('#recomendaciones');
 function createCard(title, description, image){
 
     const card = 
-    `<div class="col-md-6">
+    `<div class="col-md-9">
         <div class="mb-3 card2 mt-3">
         <div class="row g-0">
         <div class="col-md-4">
