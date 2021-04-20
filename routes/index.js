@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   if(!req.session.role){
     res.redirect('/login');
   }else{
-    res.render('recommendationPanel', { title: 'Inicio'});
+    res.render('index', { title: 'Inicio' });
   }
 });
 
@@ -58,7 +58,11 @@ router.post('/login', async (req, res) => {
     if(!user) return res.render('login', {title: 'Inicio de sesión', error: 'Email o contraseña incorrectos', msg: ''});
     if(user.password !== password) return res.render('login', {title: 'Inicio de sesión', error: 'Email o contraseña incorrectos', msg: ''})
     req.session.role = user.role;
-    res.redirect('/');
+    if(user.role !== 'admin'){
+      res.redirect('/');
+    }else{
+      res.redirect('/panelrecomendacion')
+    }
   }catch(e){
     console.log(e)
   }
@@ -85,7 +89,11 @@ router.post('/registrate', async(req, res) => {
 })
 
 router.get('/panelrecomendacion', (req, res) => {
-  res.render('recommendationPanel', {title: 'Panel de Recomendacion'})
+  if(req.session.role !== 'admin'){
+    res.redirect('/');
+  }else{
+    res.render('recommendationPanel', {title: 'Panel de Recomendacion'})
+  }
 })
 
 router.get('/like/:id', async (req, res) => {

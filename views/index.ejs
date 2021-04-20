@@ -1,10 +1,85 @@
-<%- include ./layout/header.ejs %> 
+<%- include ./layout/header.ejs %>
 
-<div class="content">
-
-  <h1>HOLA</h1>
-
-</div>
+  <h2 class="texto_Two text-white my-3 mx-5">Bienvenido a ZonaGamer</h2>
 
 
-<%- include ./layout/footer.ejs %> 
+  <div class="container border">
+    <section id="about" class="about my-2">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="./images/carru1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <h3 class="text-white" style="font-weight: bold;">Juega con Nosotros ¡¡ONLINE!!</h3>
+            <p class="text-white">
+              Entra a nuestra pagina, para divertirte con nuestros nuevos juegos y pasar un dia lleno de aventuras.
+            </p>
+            <div class="row text-white">
+              <div class="col-md-6">
+                <i class="bx bx-receipt"></i>
+                <h4 class="text-white" style="font-weight: bold;">Descarga lo Mas Nuevo</h4>
+                <p>Tenemos hasta un 50% de descuento en tu primera compra.</p>
+              </div>
+              <div class="col-md-6">
+                <i class="bx bx-cube-alt"></i>
+                <h4 style="font-weight: bold;">Conectate</h4>
+                <p>Disfruta con tus amigos, muchas horas de diversion, al menor precio.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="team">
+      <div class="container">
+
+        <div class="section-title text-white">
+          <h2>EQUIPO DESAROLLADOR</h2>
+          <p>Equipo desarrollador de Software, alumnos de la Universidad Tecnologica Metropolitana.</p>
+        </div>
+
+        <div class="row text-white">
+          <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+            <div class="member">
+              <div class="member-img">
+                <img src="./images/AARON.jpg" class="img-fluid foto" alt="" width="270" height="200px">
+              </div>
+              <div class="member-info">
+                <h4>Aaron Herrera Gonzalez</h4>
+                <span>Programador</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+            <div class="member">
+              <div class="member-img">
+                <img src="./images/ALAN.jpeg" class="img-fluid foto" alt="" width="270" height="200px">
+              </div>
+              <div class="member-info">
+                <h4>Alan Moreno Martinez</h4>
+                <span>Programador</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+            <div class="member">
+              <div class="member-img">
+                <img src="./images/GUILLERMO.jpg" class="img-fluid foto" alt="" width="270" height="200px">
+              </div>
+              <div class="member-info">
+                <h4>Guillermo Aragon Arjona</h4>
+                <span>Programador</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <%- include ./layout/footer.ejs %>

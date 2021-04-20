@@ -72,3 +72,24 @@ textarea{
   color: aliceblue;
   background-color: rgb(85, 84, 84);
 }
+
+.carrusel img{      
+  height: 400px;
+  width:800px;    
+  border-radius: 24px 24px 24px 24px;
+  content: center;
+}
+
+.foto{
+  height: 270px;
+  width: 260px;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+.suggest{
+  border: solid #fff 1px;
+  border-radius: 8px;
+  background-color: rgb(109, 109, 109);
+  color: #fff;
+}
