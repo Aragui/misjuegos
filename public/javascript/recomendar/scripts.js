@@ -71,7 +71,7 @@ title.addEventListener('change', async (e) => {
         sugeridos.appendChild(h3);
         if(json.length != 0){
             json.map(game =>{
-                const item = createTag('a', null, 'row d-flex justify-content-center align-items-center', null, null, `/like/${game._id}`);
+                const item = createTag('a', null, 'row d-flex justify-content-center align-items-center suggest', null, null, `/like/${game._id}`);
                 const img = createTag('img', null, 'col-md-3', game.photo);
                 const span = createTag('span', game.title, 'col-md-4')
                 item.appendChild(img);

@@ -16,9 +16,9 @@ function createCard(title, description, image, id){
     const card = createTag('div', null, 'Card1 text-white');
     const img = createTag('img', null, 'card-img-top', image);
     const div = createTag('div', null, 'd-flex flex-row justify-content-around align-items-center w-75');
-    const body = createTag('div', null, 'd-flex flex-column align-items-center justify-content-center h-50 mt-1');
+    const body = createTag('div', null, 'd-flex flex-column align-items-center justify-content-start h-50 mt-1');
     const h5 = createTag('h5', title, 'card-title', null, 'font-weight: bold;');
-    const p = createTag('p', description, 'card-text w-75');
+    const p = createTag('p', description, 'card-text w-75', null, 'max-height: 150px; overflow: hidden;');
     const a = createTag('a', 'Aceptar', 'btn btn-light justify-content-center');
     const a1 = createTag('a', 'Eliminar', 'btn btn-light justify-content-center');
 
